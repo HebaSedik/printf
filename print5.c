@@ -60,18 +60,18 @@ int handle_write_char(char c, char buf[],
 int write_number(int is_negative, int id, char buf[],
 	int flag, int width, int precision, int size)
 {
-	int length = BUFF_SIZE - ind - 1;
+	int length = BUFF_SIZE - id - 1;
 	char padd = ' ', extra_ch = 0;
 
 	UNUSED(size);
 
-	if ((flag & f_zero) && !(flag & flag_minus))
+	if ((flag & flag_zero) && !(flag & flag_minus))
 		padd = '0';
 	if (is_negative)
 		extra_ch = '-';
-	else if (flags & flag_puls)
+	else if (flag & flag_puls)
 		extra_ch = '+';
-	else if (flags & flag_space)
+	else if (flag & flag_space)
 		extra_ch = ' ';
 
 	return (write_num(ind, buf, flag, width, precision,
@@ -188,7 +188,7 @@ int write_unsgnd(int is_negative, int id,
 		}
 		else /* Asign extra char to left of padding [padd>buffer]*/
 		{
-			return (write(1, &buf[0], i) + write(1, &buf[ind], length));
+			return (write(1, &buf[0], i) + write(1, &buf[id], length));
 		}
 	}
 
@@ -226,7 +226,7 @@ int write_pointer(char buf[], int id, int length,
 				buf[--id] = extra_c;
 			return (write(1, &buf[3], i - 3) + write(1, &buf[id], length));
 		}
-		else if (!(flags & flag_minus) && padd == '0')/* extra char to left of padd */
+		else if (!(flag & flag_minus) && padd == '0')/* extra char to left of padd */
 		{
 			buf[--id] = 'x';
 			buf[--id] = '0';
