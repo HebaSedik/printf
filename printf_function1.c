@@ -135,7 +135,7 @@ int print_int(va_list type, char buf[],
 	i++;
 	return (write_number(is_negative, i, buf, flag, width, precision, size));
 }
-int print_binary(va_list type, char buff[],
+int print_binary(va_list type, char buf[],
 	int flag, int width, int precision, int size)
 {
 	unsigned int n, m, i, sum;
