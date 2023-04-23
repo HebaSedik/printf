@@ -45,7 +45,7 @@ int print_pointer(va_list type, char buf[],
 	else if (flag & flag_space)
 		extra_c = ' ', length++;
 
-	ind++;
+	id++;
 
 	/*return (write(1, &buf[i], BUFF_SIZE - i - 1));*/
 	return (write_pointer(buf, id, length,
