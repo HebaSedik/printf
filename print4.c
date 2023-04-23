@@ -62,7 +62,7 @@ long int convert_size_number(long int num, int size)
 {
 	if (size == size_long)
 		return (num);
-	else if (size == S_SHORT)
+	else if (size == size_short)
 		return ((short)num);
 
 	return ((int)num);
@@ -77,9 +77,9 @@ long int convert_size_number(long int num, int size)
  */
 long int convert_size_unsgnd(unsigned long int num, int size)
 {
-	if (size == S_LONG)
+	if (size == size_long)
 		return (num);
-	else if (size == S_SHORT)
+	else if (size == size_short)
 		return ((unsigned short)num);
 
 	return ((unsigned int)num);

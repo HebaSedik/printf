@@ -47,4 +47,3 @@ int handle_print(const char *fmt, int *id, va_list list, char buf[],
 	}
 	return (printed_chars);
 }
-
