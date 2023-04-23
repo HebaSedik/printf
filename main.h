@@ -12,7 +12,7 @@
 #define flag_plus 2
 #define flag_zero 4
 #define flag_hash 8
-#define f_space 16
+#define flag_space 16
 
 /* SIZES */
 #define size_long 2
