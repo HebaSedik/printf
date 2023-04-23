@@ -9,14 +9,14 @@
 
 /* FLAGS */
 #define flag_minus 1
-#define F_PLUS 2
-#define F_ZERO 4
-#define F_HASH 8
-#define F_SPACE 16
+#define flag_plus 2
+#define flag_zero 4
+#define flag_hash 8
+#define f_space 16
 
 /* SIZES */
 #define size_long 2
-#define S_SHORT 1
+#define size_short 1
 
 /**
  * struct fmt - Struct op
