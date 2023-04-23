@@ -69,12 +69,12 @@ int write_number(int is_negative, int id, char buf[],
 		padd = '0';
 	if (is_negative)
 		extra_ch = '-';
-	else if (flag & flag_puls)
+	else if (flag & flag_plus)
 		extra_ch = '+';
 	else if (flag & flag_space)
 		extra_ch = ' ';
 
-	return (write_num(ind, buf, flag, width, precision,
+	return (write_num(id, buf, flag, width, precision,
 		length, padd, extra_ch));
 }
 
